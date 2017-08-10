@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple monitoring</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="js/jquery.3.2.1.min.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    const body = $('body');
+    setInterval(() => {
+        $.get('http://localhost:8080/getStatus', data => {
+            const apps = [];
+            data.forEach(app => {
+                const envDiv = [];
+                app.environments.forEach(env => {
+                    envDiv.push(
+                        `<div class='enviroment'>
+                                <div class='envName'>${env.envName}</div>
+                                <div class='envStatus ${env.testStatus}'></div>
+                         </div>`)
+                });
+                apps.push(`<div class='app'>
+                            <div class='appName'>${app.name}</div>
+                            ${envDiv.join('')}
+                        </div>`)
+            });
+            body.empty();
+            body.append(apps.join(''));
+        });
+    }, 1000);
+</script>
+</html>

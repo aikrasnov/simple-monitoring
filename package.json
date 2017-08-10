@@ -1,0 +1,33 @@
+{
+  "name": "simple-monitoring",
+  "version": "1.0.0",
+  "description": "simple monitoring system",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/_mocha ./tests/spec.test.js",
+    "backend": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "not set"
+  },
+  "keywords": [
+    "health",
+    "monitoring",
+    "dashboard",
+    "easy"
+  ],
+  "author": "akrasnov",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "eslint": "^4.3.0",
+    "mocha": "^3.5.0"
+  }
+}

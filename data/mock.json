@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Application 1",
+        "environments": [
+            {
+                "envName": "testing",
+                "testStatus": "passed"
+            },
+            {
+                "envName": "prodiction",
+                "testStatus": "failed"
+            }
+
+        ]
+    },
+    {
+        "name": "Application 2",
+        "environments": [
+            {
+                "envName": "testing",
+                "testStatus": "passed"
+            },
+            {
+                "envName": "prestable",
+                "testStatus": "passed"
+            },
+            {
+                "envName": "prodiction",
+                "testStatus": "failed"
+            }
+
+        ]
+    },
+    {
+        "name": "Application 3",
+        "environments": [
+            {
+                "envName": "testing",
+                "testStatus": "failed"
+            },
+            {
+                "envName": "prestable",
+                "testStatus": "failed"
+            },
+            {
+                "envName": "stable",
+                "testStatus": "passed"
+            }
+        ]
+    }
+]

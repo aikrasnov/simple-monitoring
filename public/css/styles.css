@@ -1,0 +1,53 @@
+.showBorder {
+    border: 1px solid black; /* Параметры границы */
+}
+.app {
+    background-color: #FFDD33;
+    width: 300px; /* Ширина слоя */
+    margin: 7px; /* Значение отступов */
+    padding: 10px; /* Поля вокруг текста */
+    float: left;
+}
+.appName {
+    margin: auto;
+    /*max-width: 200px;*/
+    text-align: center;
+    background-color: white;
+    /*left: 20%;*/
+}
+.enviroment {
+
+}
+
+.envName {
+    float: left;
+    width: 30%;
+    text-align: center;
+}
+.envStatus {
+    /*float: left;*/
+    text-align: center;
+}
+
+.passed:before {
+    content: "PASSED";
+}
+
+.passed {
+    background-color: forestgreen;
+}
+
+.failed:before {
+    content: "FAILED";
+}
+.failed {
+    background-color: darkred;
+}
+
+.unknow:before {
+    content: "UNKNOW";
+}
+
+.unknow {
+    background: darkgray;
+}
